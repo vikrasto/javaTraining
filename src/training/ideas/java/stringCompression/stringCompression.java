@@ -22,20 +22,20 @@ public class stringCompression {
 
     public static String compress(String inputString) {
         char[] array = inputString.toCharArray();
-        String compressedString = "";
+        String compressedString2 = "";
         int sameElementCounter = 1;
         for (int counter =0; counter < array.length;counter++){
            while(sameElementCounter==1){
-               compressedString =compressedString+ Character.toString(array[sameElementCounter-1]);
+               compressedString2 =compressedString2+ Character.toString(array[sameElementCounter-1]);
            }
            if (array[counter]==array[counter]+1){
                sameElementCounter++;
            }
          }
-           compressedString = compressedString+Integer.toString(sameElementCounter);
+           compressedString2 = compressedString2+Integer.toString(sameElementCounter);
            sameElementCounter--;
 
-        return compressedString;
+        return compressedString2;
      }
 }
 
